@@ -1,0 +1,14 @@
+[Unit]
+Description=autogitsync
+After=rc-local.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/root/AutoGitSync
+ExecStart=/usr/bin/python3 sync.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
