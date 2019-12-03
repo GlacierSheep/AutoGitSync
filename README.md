@@ -1,4 +1,4 @@
-<h2 align="center"><code>AutoGitSync</code></h2>
+<h1 align="center">AutoGitSync</h1>
 
 ## 📜 About
 AutoGitSync is an automated tool that pushes the git repo to a remote git repo.
