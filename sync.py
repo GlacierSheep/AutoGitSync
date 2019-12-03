@@ -54,7 +54,7 @@ def run():
                 subprocess.call("cd " + GIT_DIR + "&& git pull", shell=True)
                 subprocess.call("cd " + GIT_DIR + "&& git push " + dst_git + " master", shell=True)
 
-            logger.info('    [i] ' + str(round_num) + ' Round syn finished!')
+            logger.info('[i] ' + str(round_num) + ' Round syn finished!')
             round_num += 1
             time.sleep(86400)
 
