@@ -51,8 +51,9 @@ def run():
                 subprocess.call("cd " + GIT_DIR + "&& git remote add " + dst_git + ' ' + dst_git_repo, shell=True)
                 subprocess.call("cd " + GIT_DIR + "&& git push " + dst_git + ' master --force', shell=True)
             else:
-                subprocess.call("cd " + GIT_DIR + "&& git pull", shell=True)
-                subprocess.call("cd " + GIT_DIR + "&& git push " + dst_git + " master", shell=True)
+                subprocess.call("cd " + GIT_DIR + "&& git fetch --all", shell=True)
+                subprocess.call("cd " + GIT_DIR + "&& git reset --hard origin/master", shell=True)
+                subprocess.call("cd " + GIT_DIR + "&& git push " + dst_git + " master --force", shell=True)
 
             logger.info('[i] ' + str(round_num) + ' Round syn finished!')
             round_num += 1
